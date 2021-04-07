@@ -17,8 +17,8 @@
   SAP Crystal Report Min 13.25
 # dev tools
   Visual Studio
-#framework
+# framework
   .net Framework / vb.net / desktop aplication
 
-#parking sensor
+# parking sensor
  Arduino UNO   
