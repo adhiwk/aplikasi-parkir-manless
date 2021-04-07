@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8923A65-9FEE-4927-B7A5-38A7087E9A7F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>PARKIR.My.MyApplication</StartupObject>
+    <RootNamespace>PARKIR</RootNamespace>
+    <AssemblyName>PARKIR</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PARKIR.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PARKIR.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>parking-solution-2nd.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV.UI, Version=4.1.0.3420, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EMGU.CV.4.1.0.3420\lib\net35\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World, Version=4.1.0.3420, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EMGU.CV.4.1.0.3420\lib\net35\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="OpenTK, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.3.1.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.GLControl.3.1.0\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.2.618.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.2.618.40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.2.618.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2019.2.618.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\clsImageProcsesing.vb" />
+    <Compile Include="Class\keyboar.hook.vb" />
+    <Compile Include="Class\print.directly.vb" />
+    <Compile Include="Class\Simple3Des.vb" />
+    <Compile Include="Control\ctrlImageCaptureList.Designer.vb">
+      <DependentUpon>ctrlImageCaptureList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ctrlImageCaptureList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ctrlJenisKendaraan.Designer.vb">
+      <DependentUpon>ctrlJenisKendaraan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ctrlJenisKendaraan.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ctrlMember.Designer.vb">
+      <DependentUpon>ctrlMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ctrlMember.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ctrlReport.Designer.vb">
+      <DependentUpon>ctrlReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ctrlReport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ctrlShiftKerja.Designer.vb">
+      <DependentUpon>ctrlShiftKerja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ctrlShiftKerja.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ctrlTarif.Designer.vb">
+      <DependentUpon>ctrlTarif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ctrlTarif.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ctrlUsers.Designer.vb">
+      <DependentUpon>ctrlUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ctrlUsers.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\frmCariJenisMember.Designer.vb">
+      <DependentUpon>frmCariJenisMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmCariJenisMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmClearSesion.Designer.vb">
+      <DependentUpon>frmClearSesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmClearSesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmDailyReport.Designer.vb">
+      <DependentUpon>frmDailyReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmDailyReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmDendaParkir.Designer.vb">
+      <DependentUpon>frmDendaParkir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmDendaParkir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmGantiPassword.Designer.vb">
+      <DependentUpon>frmGantiPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmGantiPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmJenisKendaraan.Designer.vb">
+      <DependentUpon>frmJenisKendaraan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmJenisKendaraan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmJenisMember.Designer.vb">
+      <DependentUpon>frmJenisMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmJenisMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmLaporan.Designer.vb">
+      <DependentUpon>frmLaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmLaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmManajemenUser.Designer.vb">
+      <DependentUpon>frmManajemenUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmManajemenUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmManLessIn.Designer.vb">
+      <DependentUpon>frmManLessIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmManLessIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmMember.Designer.vb">
+      <DependentUpon>frmMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmMemberOut.Designer.vb">
+      <DependentUpon>frmMemberOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmMemberOut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmMenuUtama.Designer.vb">
+      <DependentUpon>frmMenuUtama.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmMenuUtama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmParking.Designer.vb">
+      <DependentUpon>frmParking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmParking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmParkingKeluar.Designer.vb">
+      <DependentUpon>frmParkingKeluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmParkingKeluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmManLessOut.Designer.vb">
+      <DependentUpon>frmManLessOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmManLessOut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmPetugas.Designer.vb">
+      <DependentUpon>frmPetugas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmPetugas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmShift.Designer.vb">
+      <DependentUpon>frmShift.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmShift.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmTarif.Designer.vb">
+      <DependentUpon>frmTarif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmTarif.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmTiketRusak.Designer.vb">
+      <DependentUpon>frmTiketRusak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmTiketRusak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Interface\iEntryData.vb" />
+    <Compile Include="Module\PublicModule.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Control\ctrlImageCaptureList.resx">
+      <DependentUpon>ctrlImageCaptureList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ctrlJenisKendaraan.resx">
+      <DependentUpon>ctrlJenisKendaraan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ctrlMember.resx">
+      <DependentUpon>ctrlMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ctrlReport.resx">
+      <DependentUpon>ctrlReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ctrlShiftKerja.resx">
+      <DependentUpon>ctrlShiftKerja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ctrlTarif.resx">
+      <DependentUpon>ctrlTarif.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ctrlUsers.resx">
+      <DependentUpon>ctrlUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmCariJenisMember.resx">
+      <DependentUpon>frmCariJenisMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmClearSesion.resx">
+      <DependentUpon>frmClearSesion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmDailyReport.resx">
+      <DependentUpon>frmDailyReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmDendaParkir.resx">
+      <DependentUpon>frmDendaParkir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmGantiPassword.resx">
+      <DependentUpon>frmGantiPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmJenisKendaraan.resx">
+      <DependentUpon>frmJenisKendaraan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmJenisMember.resx">
+      <DependentUpon>frmJenisMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmLaporan.resx">
+      <DependentUpon>frmLaporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmManajemenUser.resx">
+      <DependentUpon>frmManajemenUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmManLessIn.resx">
+      <DependentUpon>frmManLessIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmMember.resx">
+      <DependentUpon>frmMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmMemberOut.resx">
+      <DependentUpon>frmMemberOut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmMenuUtama.resx">
+      <DependentUpon>frmMenuUtama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmParking.resx">
+      <DependentUpon>frmParking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmParkingKeluar.resx">
+      <DependentUpon>frmParkingKeluar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmManLessOut.resx">
+      <DependentUpon>frmManLessOut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmPetugas.resx">
+      <DependentUpon>frmPetugas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmShift.resx">
+      <DependentUpon>frmShift.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmTarif.resx">
+      <DependentUpon>frmTarif.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmTiketRusak.resx">
+      <DependentUpon>frmTiketRusak.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\disk_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_family.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk_green1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rs haparan keluarga.JPG" />
+    <None Include="Resources\arrow_down_blue.png" />
+    <None Include="Resources\arrow_up_green.png" />
+    <None Include="Resources\money_envelope.png" />
+    <None Include="Resources\ns.jpg" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\user1_lock.png" />
+    <None Include="Resources\Backdrop NS.jpg" />
+    <None Include="Resources\user1_lock1.png" />
+    <None Include="Resources\undo.png" />
+    <None Include="Resources\cookies.png" />
+    <None Include="Resources\document_ok.png" />
+    <None Include="Resources\printer_ok.png" />
+    <None Include="Resources\gears.png" />
+    <None Include="Resources\gear_view.png" />
+    <None Include="Resources\text_view.png" />
+    <None Include="Resources\logo.jpeg" />
+    <None Include="Resources\logo1.png" />
+    <None Include="Resources\login.jpeg" />
+    <Content Include="License-LGPL.txt" />
+    <None Include="Resources\member24.png" />
+    <None Include="Resources\member48.png" />
+    <None Include="Resources\tarif48.png" />
+    <None Include="Resources\jeniskendaraan48.png" />
+    <None Include="Resources\window-close24.png" />
+    <None Include="Resources\add24.png" />
+    <None Include="Resources\delete24.png" />
+    <None Include="Resources\save24.png" />
+    <None Include="Resources\refresh24.png" />
+    <None Include="Resources\user-entry48.png" />
+    <None Include="Resources\sale-report48.png" />
+    <None Include="Resources\parking-icon-car.png" />
+    <None Include="Resources\logout48.png" />
+    <Content Include="parking-solution-2nd.ico" />
+    <None Include="Resources\parking-solution-2nd.png" />
+    <None Include="Resources\username24.png" />
+    <None Include="Resources\userpassword24.png" />
+    <None Include="Resources\window-close241.png" />
+    <None Include="Resources\login24.png" />
+    <None Include="Resources\shift48.png" />
+    <None Include="Resources\bill24.png" />
+    <None Include="Resources\camera48.png" />
+    <None Include="Resources\filter24.png" />
+    <Content Include="wheel.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\EMGU.CV.4.1.0.3420\build\EMGU.CV.targets" Condition="Exists('..\packages\EMGU.CV.4.1.0.3420\build\EMGU.CV.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EMGU.CV.4.1.0.3420\build\EMGU.CV.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EMGU.CV.4.1.0.3420\build\EMGU.CV.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

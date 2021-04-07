@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.</Value>
+    </Setting>
+    <Setting Name="user" Type="System.String" Scope="User">
+      <Value Profile="(Default)">lFRRYWD0RfM=</Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SXATVQXDiRfEhqQ99+Z9/A==</Value>
+    </Setting>
+    <Setting Name="dbname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">RpuWAK6JW/k=</Value>
+    </Setting>
+    <Setting Name="gerbang" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MBL01</Value>
+    </Setting>
+    <Setting Name="printer_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EPSON TM-U220 Receipt</Value>
+    </Setting>
+    <Setting Name="jenis_gerbang" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OUT</Value>
+    </Setting>
+    <Setting Name="kode_kendaraan" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C</Value>
+    </Setting>
+    <Setting Name="com_port_in" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM4</Value>
+    </Setting>
+    <Setting Name="com_port_out" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM5</Value>
+    </Setting>
+    <Setting Name="baud_rate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">9600</Value>
+    </Setting>
+    <Setting Name="cam_type" Type="System.String" Scope="User">
+      <Value Profile="(Default)">IP_CAM</Value>
+    </Setting>
+    <Setting Name="cam_link" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/tnc_62369710_4000x2200.jpg</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
